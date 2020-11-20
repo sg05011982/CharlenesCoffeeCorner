@@ -1,0 +1,96 @@
+
+	 * Assumptions made
+	 * Discount given is with respect to the least price in the section
+	 * Not tracking user for stamp card process (will not remember if he visit again)
+	 * Names should be as per the Document and it should follow positive number separated by "-"
+	 * 
+	 * List of products
+	 * 	Small_Coffee
+	 *  Large_Coffee
+	 *  Medium_Coffee
+	 *  Orange_Juice
+	 *  Bacon_Roll
+	 *  Extra_Milk
+	 *  Foamed_Milk
+	 *  Roast_Coffee
+	 * 
+	 * Exception handling is at very minimal level and also formatting can be done better
+	 
+	 
+	 
+	 ********************************************************************************************************
+	 
+	 HOW TO RUN THE PROGRAM ?
+	 
+	 1. Load the project using maven into any IDE with JDK 8 installed
+	 2. Run the DemoCoffeeBill program with appropriate list of combos with name specified in the comment prefixed with quantity
+	 3. You can run the test cases as well by right clicking on the project and run test cases option 
+	 
+	 
+	 How to Pass the arguments ?
+	 
+	 Pass the arguments separated by "-" like 4-Small_Coffee 
+	  represents 4 small coffees needs to be ordered
+	 pass BILL to bill the so far ordered items and go to next bill (if its called by biller)
+	 pass EXIT to bill the so far ordered items and exit the billing process
+
+	 
+	 Example:
+	 
+		  List of products 
+		  Beverages Offerred ====================
+		  Small_Coffee
+		  Large_Coffee
+		  Medium_Coffee
+		  Juice Offerred ====================
+		  Orange_Juice 
+		  Snacks Offerred ====================
+		  Bacon_Roll 
+		  Extras Offerred ====================
+		  Extra_Milk 
+		  Foamed_Milk 
+		  Roast_Coffee
+		
+		
+			Offers Running, Hurry Up !!!
+			=========================================================
+			Every 5th beverage is for FREE !!!
+			Every Snack + Juice, One of the Extra is for FREE !!! 
+			=========================================================
+			Please order listed items with quantity (Minimum 1 and no Half)
+			pass EXIT to generate Bill and exit & BILL to Generate Bill but Continue 
+			
+			
+			1-Orange_Juice
+			2-Bacon_Roll
+		    BILL
+			=========================================================
+			Name===============Type============Quantity=========Price
+			name= Orange_Juice ==>> type= juice==> quantity= 1==> price= 3.95
+			name= Bacon_Roll ==>> type= snack==> quantity= 2==> price= 9.0
+			Total Discounts================0 CHF
+			=====================================================
+			Total Bill after Discounts================12.95 CHF
+		
+		Please pass listed items with quantity seperated by - (Minimum 1 and no Half)
+		pass EXIT to generate Bill and exit & BILL to Generate Bill but Continue 
+		
+		
+		1-Bacon_Roll
+		2-Bacon_Roll
+		1-Extra_Milk
+		BILL
+		=========================================================
+		Name===============Type============Quantity=========Price
+		name= Bacon_Roll ==>> type= snack==> quantity= 1==> price= 4.5
+		name= Bacon_Roll ==>> type= snack==> quantity= 2==> price= 9.0
+		name= Extra_Milk ==>> type= extras==> quantity= 1==> price= 0.3
+		Total Discounts================0 CHF
+		=====================================================
+		Total Bill after Discounts================13.8 CHF
+		Please pass listed items with quantity seperated by - (Minimum 1 and no Half)
+		pass EXIT to generate Bill and exit & BILL to Generate Bill but Continue 
+		
+		Note:-Please install maven and JDK 1.8+
+		Optional:Junit4.3 need to be added in the library
+			 
